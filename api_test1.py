@@ -4,7 +4,8 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-API_KEY = os.getenv("your_API_KEY")
+API_KEY = os.getenv("GEMINI_API_KEY")
+client = genai.Client(api_key=API_KEY)
 
 pdf_file = ("infinity.pdf")
 
@@ -24,7 +25,7 @@ else:
 
 while True:
     question = input("Looking for a infinity stone?\n ")
-    if question == "quit":
+    if question.lower() == "quit":
        break
     
     prompt = f"Based on this Texts:\n\n{notes}\n\n Answer this question{question}"
