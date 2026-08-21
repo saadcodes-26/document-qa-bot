@@ -6,14 +6,14 @@ import os
 load_dotenv()
 API_KEY = os.getenv("your_API_KEY")
 
-pdf_file = ("")
+pdf_file = ("infinity.pdf")
 
 if not os.path.exists(pdf_file):
     print("Error: No Pdf file found")
 else:
 
 
- reader = PdfReader("")
+ reader = PdfReader("infinity.pdf")
  notes = ""
  for page in reader.pages:
     notes += page.extract_text()
@@ -23,7 +23,7 @@ else:
 )
 
 while True:
-    question = input("How can i help you?\n ")
+    question = input("Looking for a infinity stone?\n ")
     if question == "quit":
        break
     
