@@ -1,6 +1,7 @@
 # Document Q&A Bot
 
 A Python tool that answers questions about any PDF using Google's Gemini AI.
+
 🔗 **Live demo:** (https://document-appbot.streamlit.app/)]
 
 ## How it works
